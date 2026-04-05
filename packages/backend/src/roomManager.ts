@@ -72,6 +72,16 @@ export function vote(roomId: string, userId: string, points: PointValue): void {
   room.lastActivityAt = Date.now()
 }
 
+export function unvote(roomId: string, userId: string): void {
+  const room = rooms.get(roomId)
+  const participant = room?.participants.get(userId)
+  if (!room || !participant) return
+
+  participant.hasVoted = false
+  delete participant.points
+  room.lastActivityAt = Date.now()
+}
+
 export function reveal(roomId: string): void {
   const room = rooms.get(roomId)
   if (!room) return

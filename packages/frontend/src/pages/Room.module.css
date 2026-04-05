@@ -1,0 +1,212 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  background: var(--color-surface-container-lowest);
+  box-shadow: var(--shadow-cloud);
+}
+
+.roomId {
+  font-family: var(--font-display);
+  font-size: var(--text-title-sm);
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.roomIdLabel {
+  font-size: var(--text-body-sm);
+  font-weight: 400;
+  color: var(--color-on-surface-variant);
+  margin-right: 0.5rem;
+}
+
+.copyWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-container);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.4rem;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.copyBtn:hover {
+  background: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.copyConfirm {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--color-on-secondary-container);
+  background: var(--color-secondary-container);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.gearBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-container);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.35rem;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.gearBtn:hover {
+  background: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.status {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.status.connected {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+.status.connecting {
+  background: var(--color-surface-container-highest);
+  color: var(--color-on-surface-variant);
+}
+
+.status.disconnected {
+  background: var(--color-surface-dim);
+  color: var(--color-on-surface-variant);
+}
+
+/* ── Main content ── */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 3rem 2rem;
+  max-width: 64rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ── Participants ── */
+.participantsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.participants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.emptyState {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  color: var(--color-on-surface-variant);
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnPrimary {
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 0.875rem 2rem;
+  font-family: var(--font-body);
+  font-size: var(--text-title-sm);
+  font-weight: 700;
+  color: var(--color-on-primary);
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btnPrimary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: transparent;
+  border: 2px solid var(--color-outline-variant);
+  border-radius: var(--radius-full);
+  padding: 0.875rem 2rem;
+  font-family: var(--font-body);
+  font-size: var(--text-title-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.btnSecondary:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+/* ── Voting section ── */
+.votingSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Redirect notice ── */
+.redirect {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  color: var(--color-on-surface-variant);
+}

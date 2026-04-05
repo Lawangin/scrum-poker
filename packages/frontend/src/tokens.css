@@ -1,0 +1,67 @@
+:root {
+  /* ── Colors ── */
+  --color-background:                #f9f4ff;
+  --color-surface:                   #f9f4ff;
+  --color-surface-dim:               #e8e3f4;
+  --color-surface-container-lowest:  #ffffff;
+  --color-surface-container-low:     #f3eeff;
+  --color-surface-container:         #ede8fa;
+  --color-surface-container-high:    #e7e2f4;
+  --color-surface-container-highest: #e1dcee;
+  --color-surface-variant:           #e4dfff;
+
+  --color-primary:                   #4652b0;
+  --color-primary-container:         #8c99fc;
+  --color-on-primary:                #ffffff;
+
+  --color-secondary-container:       #85f6e5;
+  --color-on-secondary-container:    #00201b;
+
+  --color-tertiary-fixed:            #f3daff;
+
+  --color-on-surface:                #2e2a50;
+  --color-on-surface-variant:        #6b648e;
+  --color-on-background:             #2e2a50;
+
+  --color-outline-variant:           #aea8d7;
+  --color-inverse-surface:           #0d072e;
+
+  /* ── Typography ── */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body:    'Manrope', sans-serif;
+
+  --text-display-lg:  clamp(3rem, 8vw, 5rem);
+  --text-headline-sm: 1.5rem;
+  --text-title-md:    1.125rem;
+  --text-title-sm:    1rem;
+  --text-body-sm:     0.875rem;
+
+  /* ── Elevation / Shadows ── */
+  --shadow-cloud: 0 20px 40px rgba(46, 42, 80, 0.06);
+
+  /* ── Border Radius ── */
+  --radius-sm:   0.5rem;
+  --radius-md:   1.5rem;   /* voting cards */
+  --radius-lg:   3rem;     /* main container wraps */
+  --radius-full: 9999px;   /* buttons */
+
+  /* ── Gradients ── */
+  --gradient-primary: linear-gradient(135deg, #4652b0, #8c99fc);
+
+  /* ── Glassmorphism ── */
+  --glass-bg:   rgba(228, 223, 255, 0.6); /* surface-variant @ 60% */
+  --glass-blur: 24px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+}

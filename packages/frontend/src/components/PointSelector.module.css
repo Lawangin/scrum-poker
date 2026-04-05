@@ -1,0 +1,37 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.card {
+  width: 4.5rem;
+  height: 6rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-container-lowest);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: var(--text-title-md);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  box-shadow: var(--shadow-cloud);
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.card:hover:not(.selected) {
+  transform: translateY(-4px);
+}
+
+.card.selected {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+  transform: translateY(-8px);
+}
+
+.card:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}

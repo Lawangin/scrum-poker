@@ -1,12 +1,16 @@
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router'
+import { LandingPage } from './pages/LandingPage'
+import { Room } from './pages/Room'
 
 const App = () => {
   return (
-    <div className="content">
-      <h1>Rsbuild with React</h1>
-      <p>Start building amazing things with Rsbuild. Law</p>
-    </div>
-  );
-};
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/room/:id" element={<Room />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
 
-export default App;
+export default App

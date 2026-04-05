@@ -39,11 +39,16 @@ export interface RevealMessage {
   type: 'reveal'
 }
 
+export interface UnvoteMessage {
+  type: 'unvote'
+  userId: string
+}
+
 export interface ResetMessage {
   type: 'reset'
 }
 
-export type ClientMessage = JoinMessage | VoteMessage | RevealMessage | ResetMessage
+export type ClientMessage = JoinMessage | VoteMessage | UnvoteMessage | RevealMessage | ResetMessage
 
 // --- Server → Client messages ---
 

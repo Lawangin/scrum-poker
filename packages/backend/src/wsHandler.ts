@@ -4,6 +4,7 @@ import {
   addParticipant,
   removeParticipant,
   vote,
+  unvote,
   reveal,
   reset,
   broadcast,
@@ -33,6 +34,12 @@ export function handleConnection(ws: WebSocket, roomId: string): void {
 
       case 'vote': {
         vote(roomId, message.userId, message.points)
+        broadcast(roomId, buildRoomStateMessage(roomId))
+        break
+      }
+
+      case 'unvote': {
+        unvote(roomId, message.userId)
         broadcast(roomId, buildRoomStateMessage(roomId))
         break
       }
