@@ -30,6 +30,9 @@ jobs:
         run: pnpm install
 
       - name: Build frontend
+        env:
+          NODE_ENV: production
+          RSBUILD_WS_URL: ${{ secrets.RSBUILD_WS_URL }}
         run: pnpm --filter @scrum-poker/frontend build
 
       - name: Sync to S3

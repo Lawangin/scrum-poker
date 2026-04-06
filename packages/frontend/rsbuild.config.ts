@@ -7,7 +7,10 @@ const { publicVars } = loadEnv({ prefixes: ['RSBUILD_'] });
 export default defineConfig({
   plugins: [pluginReact()],
   source: {
-    define: publicVars,
+    define: {
+      'process.env.RSBUILD_WS_URL': 'undefined', // fallback if env var not set; allows ?? in code
+      ...publicVars,
+    },
   },
   html: {
     tags: [
