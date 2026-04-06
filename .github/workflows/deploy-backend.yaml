@@ -40,7 +40,8 @@ jobs:
           chmod 400 key.pem
           ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@$EC2_HOST << 'EOF'
             cd ~/scrum-poker
-            git pull
+            git fetch origin
+            git reset --hard origin/main
             pnpm install
             pnpm --filter @scrum-poker/backend build
             pm2 restart scrum-poker-backend
