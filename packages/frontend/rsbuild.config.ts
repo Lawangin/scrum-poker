@@ -13,6 +13,8 @@ export default defineConfig({
     },
   },
   html: {
+    title: 'Scrum Poker',
+    favicon: './public/favicon.svg',
     tags: [
       {
         tag: 'link',

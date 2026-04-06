@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4652b0"/>
+      <stop offset="100%" style="stop-color:#8c99fc"/>
+    </linearGradient>
+  </defs>
+  <!-- Card background with primary gradient at 135deg -->
+  <rect width="32" height="32" rx="5" fill="url(#cardGrad)"/>
+  <!-- Spade symbol -->
+  <text x="16" y="23" font-size="20" text-anchor="middle" fill="#f9f4ff" font-family="serif">♠</text>
+</svg>
